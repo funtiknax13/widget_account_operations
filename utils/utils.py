@@ -41,7 +41,7 @@ def select_last_operations(operations):
     sorted_data = sorted(operations, key=lambda d: d['date'], reverse=True)
     last_operations = []
     operation_index = 0
-    while len(last_operations) < 5:
+    while len(last_operations) < 5 and operation_index < len(operations):
         if sorted_data[operation_index]["state"] == "EXECUTED":
             last_operations.append(sorted_data[operation_index])
         operation_index += 1
