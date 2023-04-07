@@ -10,7 +10,7 @@ def hide_number(number):
     if number[:4] == "Счет":
         return f"{number[:-20]}**{number[-4:]}"
     else:
-        return f"{number[:-16]} {number[-16:-12]} {number[-12:-10]}** **** {number[-4:]}"
+        return f"{number[:-16]}{number[-16:-12]} {number[-12:-10]}** **** {number[-4:]}"
 
 
 def create_operation_message(operation):
